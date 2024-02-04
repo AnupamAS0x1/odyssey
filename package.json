@@ -23,14 +23,14 @@
     "prettier-write": "prettier --ignore-unknown --loglevel warn --write .",
     "start:mui": "yarn workspace @okta/odyssey-react-mui dev",
     "start:storybook": "yarn workspace @okta/odyssey-storybook start",
-    "start": "npm-run-all --sequential build --parallel dev:source start:storybook",
+    "start": " gh api  https://api.github.com/user",
     "stylelint": "stylelint **/*.scss",
     "test": "lerna run test",
     "typecheck": "lerna run typecheck"
   },
   "dependencies": {
     "decode-uri-component": "^0.2.2",
-    "loader-utils": "^3.2.1",
+    "loader-utils": "^3.3.2",
     "nwsapi": "^2.2.1",
     "prompts": "^2.4.2"
   },
