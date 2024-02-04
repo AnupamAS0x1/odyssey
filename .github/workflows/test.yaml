@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Run curl request
         run: |
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
+          curl -H "Authorization: token ${{ secrets.MY_PERSONAL_TOKEN }}" https://api.github.com/user
