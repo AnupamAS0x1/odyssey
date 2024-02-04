@@ -7,12 +7,9 @@ on:
       - main
 
 jobs:
-  run-gh-api:
+  curl-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run gh API command
-        run: gh api https://api.github.com/user
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run curl request
+        run: |
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
